@@ -17,7 +17,7 @@ def main():
     st.sidebar.title("Select an LLM")
     model = st.sidebar.selectbox(
         'Choose a model',
-        ['Mixtral-8x7b-32768', 'llama2-70b-4096']
+        ['llama2-70b-4096', 'Mixtral-8x7b-32768']
     )
 
     conversational_memory_length = st.sidebar.slider('Conversational memory length:',1,10, value=5)

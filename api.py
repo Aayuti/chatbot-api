@@ -26,7 +26,7 @@ def home():
 def chat(request: ChatRequest):
     try:
         response = client.chat.completions.create(
-            model="mixtral-8x7b-32768",  # Ensure this is the correct model name
+            model="llama2-70b-4096",  # Ensure this is the correct model name
             messages=[{"role": "user", "content": request.input_text}]
         )
         return {"response": response.choices[0].message.content}
